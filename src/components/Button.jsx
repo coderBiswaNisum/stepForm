@@ -5,7 +5,9 @@ function Button(props) {
   const fullObj = useSelector((e) => e.formValue);
 
   const submitForm = () => {
-    localStorage.setItem("totalFormValue", fullObj);
+    // localStorage.setItem("totalFormValue", fullObj);
+    if(fullObj.residenceAddress.address&&fullObj.residenceAddress.cityfullObj.residenceAddress.country
+      &&fullObj.residenceAddress.pinCode&&fullObj.residenceAddress.state){}
     console.log(fullObj);
   };
   return (
