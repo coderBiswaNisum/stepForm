@@ -5,8 +5,10 @@ import { useSelector } from "react-redux";
 
 function Form() {
   const selectedTab = useSelector((stateVal) => stateVal.formData.value);
+  const missedTabColor = useSelector((s) => s.formData.color);
   
   const formHeaders = ["Profile", "Address", "Tech Stack"];
+  // console.log(missedTabColor)
   
   return (
     <div className="flex items-center flex-col mt-5">

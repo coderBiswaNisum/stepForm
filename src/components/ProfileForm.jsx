@@ -5,9 +5,9 @@ import InputRadio from "./InputRadio";
 function ProfileForm() {
   return (
     <>
-      <InputField name="First Name" objKey='firstName' />
-      <InputField name="Last Name" objKey='lastName' />
-      <InputRadio objKey="gender"/>
+      <InputField type="text" name="First Name" objKey="firstName" />
+      <InputField type="text" name="Last Name" objKey="lastName" />
+      <InputRadio objKey="gender" />
     </>
   );
 }

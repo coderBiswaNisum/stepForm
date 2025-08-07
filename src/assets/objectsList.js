@@ -28,3 +28,4 @@ export const techStack = {
   Backend: ["Node.js + Express", "Django", "Flask", "Spring Boot", "FastAPI"],
   BackendNames: ["nodeExpress", "django", "flask", "springBoot", "fastAPI"],
 };
+

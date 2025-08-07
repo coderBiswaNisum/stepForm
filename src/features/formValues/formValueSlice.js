@@ -20,18 +20,7 @@ const initialState = {
     pinCode2: "",
     country2: "",
   },
-  techStack: {
-    react: false,
-    vuejs: false,
-    angular: false,
-    svelte: false,
-    nextjs: false,
-    nodeExpress: false,
-    django: false,
-    flask: false,
-    springBoot: false,
-    fastAPI: false,
-  },
+  techStack: [],
 };
 
 export const formValueSlice = createSlice({
@@ -56,7 +45,6 @@ export const formValueSlice = createSlice({
           country2: "",
         };
       }
-      console.log(state.permanentAddress.address2)
     },
     updateObject: (state, action) => {
       let { key, values } = action.payload;
@@ -67,7 +55,13 @@ export const formValueSlice = createSlice({
       } else if (state.permanentAddress.hasOwnProperty(key)) {
         state.permanentAddress[key] = values;
       } else {
-        state.techStack[key] = values;
+        if (state.techStack.includes(key)) {
+          const tempTechStack = [...state.techStack];
+          state.techStack = tempTechStack.filter(val => val!=key);
+        } else {
+          state.techStack = [...state.techStack, key];
+        }
+        // console.log(state.techStack);
       }
     },
   },

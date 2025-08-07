@@ -3,6 +3,7 @@ import CheckBoxField from "./CheckBoxField";
 import { techStack } from "../assets/objectsList";
 
 function TechStackForm() {
+  
   return (
     <div className="w-full flex align-center">
       <div className="w-1/2 ml-5">
@@ -10,17 +11,17 @@ function TechStackForm() {
         {techStack.Frontend.map((val, i) => (
           <CheckBoxField
             name={val}
-            objKey={techStack.FrontendNames[i]}
+            objKey={techStack.Frontend[i]}
             key={val}
           />
-        ))}
+        ))} 
       </div>
       <div className="w-1/2">
         <h2 className="text-2xl py-3 pl-2 font-bold mt-5">Backend :</h2>
         {techStack.Backend.map((val, i) => (
           <CheckBoxField
             name={val}
-            objKey={techStack.BackendNames[i]}
+            objKey={techStack.Backend[i]}
             key={val}
           />
         ))}

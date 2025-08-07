@@ -9,15 +9,12 @@ import { useSelector, useDispatch } from "react-redux";
 import { updateSameAddress } from "../features/formValues/formValueSlice";
 
 function AddressForm() {
-  const formLabel = useSelector((c) => c.formData.value);
-  console.log(formLabel);
+  // const formLabel = useSelector((c) => c);
+  // console.log(formLabel);
   const dispatch = useDispatch();
   const [same, setSame] = useState(false);
 
   const sameAsAbove = () => {
-    // const allFieldsFilled = formLabel.residenceAddress.every(
-    //   (field) => fullObj.residenceAddress?.[field]
-    // );
     dispatch(updateSameAddress(!same));
     setSame(!same);
   };
@@ -33,13 +30,14 @@ function AddressForm() {
         <input
           type="checkbox"
           name="sameAsResidence"
+          id="sameAsResidence"
           className="ml-2"
           onClick={sameAsAbove}
         />
-        <h3 className="pl-3">Same as above</h3>
+        <h4 className="pl-3">Same as above</h4>
       </div>
 
-      {!same &&
+      {
         addressFields.map((val, i) => (
           <InputField name={val} objKey={permanentAddressNames[i]} key={val} />
         ))}
