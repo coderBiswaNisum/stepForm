@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import useErrorMsg from "../utils/useErrorMsg";
-import { updateColor } from "../features/formData/formDataSlice";
+import { updateColor } from "../featuresRedux/formData/formDataSlice";
 // import useErrorMsg from "../utils/useErrorMsg";
 
 function Button(props) {

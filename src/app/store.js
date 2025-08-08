@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import formDataReducer from '../features/formData/formDataSlice'
-import formValueReducer from '../features/formValues/formValueSlice'
+import formDataReducer from '../featuresRedux/formData/formDataSlice'
+import formValueReducer from '../featuresRedux/formValues/formValueSlice'
 
 export const store = configureStore({
   reducer: {

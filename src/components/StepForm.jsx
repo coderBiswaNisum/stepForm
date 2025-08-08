@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { decrement, increment } from "../features/formData/formDataSlice";
+import { decrement, increment } from "../featuresRedux/formData/formDataSlice";
 import Button from "./Button";
 import ProfileForm from "./ProfileForm";
 import AddressForm from "./AddressForm";

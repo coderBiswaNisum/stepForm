@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateObject } from "../features/formValues/formValueSlice";
+import { updateObject } from "../featuresRedux/formValues/formValueSlice";
 
 function InputField({ name = "Dummy", objKey }) {
   const dispatch = useDispatch();

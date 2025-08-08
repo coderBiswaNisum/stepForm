@@ -1,13 +1,10 @@
-// steps/formSteps.js
 import { Given, When, Then } from "@cucumber/cucumber";
 import { chromium, expect } from "@playwright/test";
 
 let browser, context, page;
 
-console.log("✅ Step definitions file is being loaded");
 
 Given("I open the form", async function () {
-  console.log("Opening form...");
   browser = await chromium.launch();
   context = await browser.newContext();
   page = await context.newPage();
@@ -15,7 +12,6 @@ Given("I open the form", async function () {
 });
 
 When("I fill the form with valid data", async function () {
-  console.log("Filling form...");
   await page.getByPlaceholder("First Name").fill("Biswaranjan");
   await page.getByPlaceholder("Last Name").fill("Pradhan");
   await page.locator("#Male").click();
@@ -43,7 +39,6 @@ When("I fill the form with valid data", async function () {
 
 Then("I should see the submission alert", function () {
   page.on("dialog", async (dialog) => {
-    console.log("Alert shown");
     expect(dialog.message()).toBe(
       "Form Submitted Successfully! Check your console for form data."
     );

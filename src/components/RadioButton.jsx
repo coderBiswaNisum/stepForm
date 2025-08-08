@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateObject } from "../features/formValues/formValueSlice";
+import { updateObject } from "../featuresRedux/formValues/formValueSlice";
 
 function RadioButton({ name }) {
   const genderItem = useSelector((c) => c.formValue.profile.gender);

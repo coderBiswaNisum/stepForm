@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateObject } from "../features/formValues/formValueSlice";
+import { updateObject } from "../featuresRedux/formValues/formValueSlice";
 
 function CheckBoxField({ name, objKey }) {
   const checkbox = useSelector((c) => c.formValue.techStack);

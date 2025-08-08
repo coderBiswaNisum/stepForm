@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch,useSelector } from "react-redux";
-import { updateState } from "../features/formData/formDataSlice";
+import { updateState } from "../featuresRedux/formData/formDataSlice";
 
 function DependentTabButton({value = "NA",bgColor='bg-green-600',index}) {
 

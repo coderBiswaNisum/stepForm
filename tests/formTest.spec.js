@@ -305,9 +305,3 @@ test.describe("Step Form Submission", () => {
 
 
 
-
-// This is the check for error if user misses any of the field in the profile page
-// Test to check if error showing when any field in Residence Address is missed
-// Test to check if error showing when Permanent Address is not filled
-// Test to check if no field is selected in Tech Stack section and user tries to submit
-// Writing the test case where all the fields are filled and form is submitted successfully

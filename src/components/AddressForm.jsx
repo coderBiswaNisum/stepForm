@@ -6,7 +6,7 @@ import {
   residenceAddressNames,
 } from "../assets/objectsList";
 import { useSelector, useDispatch } from "react-redux";
-import { updateSameAddress } from "../features/formValues/formValueSlice";
+import { updateSameAddress } from "../featuresRedux/formValues/formValueSlice";
 
 function AddressForm() {
   // const formLabel = useSelector((c) => c);
