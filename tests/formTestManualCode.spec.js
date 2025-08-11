@@ -11,7 +11,7 @@ test.beforeEach(async({page})=>{
   }) => {
     await page.getByPlaceholder("First Name").fill("Biswaranjan");
     await page.getByPlaceholder("Last Name").fill("Pradhan");
-    await page.locator("#Male").click();
+    await page.locator("#Male").check();
     await page.locator("text=Next").click();
     await page.getByPlaceholder("Address").nth(0).fill("Plot no: 301");
     await page.keyboard.press("Tab");

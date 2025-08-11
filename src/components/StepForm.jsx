@@ -49,7 +49,7 @@ function StepForm() {
       {formLabel == 0 && <ProfileForm />}
       {formLabel == 1 && <AddressForm />}
       {formLabel == 2 && <TechStackForm />}
-      <h3 className="text-red-500 pl-2">{errorMsg}</h3>
+      <h3 className="text-red-500 pl-2" id="errMsg">{errorMsg}</h3>
 
       <div className="flex flex-row justify-around mt-5">
         <div onClick={() => dispatch(decrement())}>
